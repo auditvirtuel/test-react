@@ -23,6 +23,8 @@ import Page404 from "./page/404";
 
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { QueryClient, QueryClientProvider } from "react-query";
+import { ReactQueryDevtools } from 'react-query/devtools'
+
 
 const queryClient = new QueryClient();
 
@@ -80,6 +82,7 @@ class App extends React.Component {
             </Switch>
           </Router>
         </ThemeProvider>
+        <ReactQueryDevtools initialIsOpen={false} />
       </QueryClientProvider>
     );
   };
